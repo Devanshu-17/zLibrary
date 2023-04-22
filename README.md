@@ -17,3 +17,8 @@ This is a web app that allows you to download books and articles from zLibrary. 
 -   You can download up to 10 books or articles at a time.
 -   You can regiter for a free account at [zlibrary](https://singlelogin.me/)
 -   I am not responsible for any illegal use of this service.
+
+## Credits for Endpoints
+
+- [Zlibrary-API](https://github.com/bipinkrish/Zlibrary-API)
+- [zlibrary-eapi-documentation](https://github.com/baroxyton/zlibrary-eapi-documentation)
