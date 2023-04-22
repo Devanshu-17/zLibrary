@@ -3,12 +3,10 @@ from Zlibrary import Zlibrary
 
 st.title("zLibrary")
 st.sidebar.image("https://lib-adx6glm3iku7ovjtugrh2i7u.1lib.me/img/logo.zlibrary.png", width=200)
-    #add a line dash
+# add a line dash
 st.sidebar.markdown("---")
 st.sidebar.header("1. Search and download books from zLibrary")
 st.sidebar.header("2. Enter your zLibrary credentials to search and download books")
-
-
 
 # Create Zlibrary object and login
 @st.cache_data
@@ -20,6 +18,26 @@ password = st.text_input("Enter password:", type="password")
 
 if email and password:
     Z = login(email, password)
+
+    # get user info
+    user_info = Z.getProfile()
+    st.sidebar.markdown("---")
+    st.sidebar.header("User info")
+
+    # Display user name
+    st.sidebar.subheader("Name:")
+    st.sidebar.write(user_info["user"]["name"])
+
+    # Display downloads information
+    st.sidebar.subheader("Downloads:")
+    today_downloads = user_info['user']['downloads_today']
+    limit_downloads = user_info['user']['downloads_limit']
+    remaining_downloads = limit_downloads - today_downloads
+    st.sidebar.write(f"Today: {today_downloads}")
+    st.sidebar.write(f"Limit: {limit_downloads}")
+    st.sidebar.write(f"Remaining: {remaining_downloads}")
+    st.sidebar.progress(today_downloads / limit_downloads)
+
 
     # Search for books
     book_name = st.text_input("Enter book name:")
