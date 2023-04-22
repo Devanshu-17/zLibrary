@@ -15,4 +15,5 @@ This is a web app that allows you to download books and articles from zLibrary. 
 
 -   I have added a demo account for you to try out the service. The email address is `f4thdgfdjn@email.edu.pl` and the password is `9EFyc4Y&cn@GzGY`.
 -   You can download up to 10 books or articles at a time.
+-   You can regiter for a free account at [zlibrary](https://singlelogin.me/)
 -   I am not responsible for any illegal use of this service.
