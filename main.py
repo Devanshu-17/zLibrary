@@ -2,7 +2,7 @@ import streamlit as st
 from Zlibrary import Zlibrary
 
 st.title("zLibrary")
-st.sidebar.image("https://lib-adx6glm3iku7ovjtugrh2i7u.1lib.me/img/logo.zlibrary.png", width=200)
+st.sidebar.image("./assets/logo.png", width=200)
 # add a line dash
 st.sidebar.markdown("---")
 st.sidebar.header("1. Search and download books from zLibrary")
